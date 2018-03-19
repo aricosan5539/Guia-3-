@@ -1,46 +1,47 @@
- import java.util.*;
+import java.util.*;
 
 public class Principal {
 
 	public static void main(String[] args) {
-	    Scanner enter=new Scanner(System.in);
-	    	    
-	   ArrayList<Empleado> Empleados=new ArrayList<Empleado>();
+	    Scanner sc=new Scanner(System.in);
+	    Ascensor ejecucion= new Ascensor();
+	    
 	    int opcion=0;
-	       
-	       System.out.println("Supermercado Santa Fe:\n Bienvenido al gestor de usuarios.");
-	    do{ 
-	        
-	        System.out.println("Menu");
-	        System.out.println("1. Ingresar nuevo Empleado");
-	        System.out.println("2. Cantidad de empleados actualmente registrados");
-	        System.out.println("0. Salir");
-	        opcion=enter.nextInt();
-	        
-	       
-	       switch (opcion){
-	           case 1:
-	           Empleado Nuevo=new Empleado();
-		Nuevo.asignarNombre("");
-		Nuevo.asignarDepartamento("");
-		Nuevo.asignarPosición("");
-		Nuevo.asignarSalario("");
-	           Nuevo.imprimir();
-	           
-	           Empleados.add(Nuevo);
-	           break;
-	           
-	           case 2:
-	           
-	           System.out.println("El numero de empleados es :" + Empleados.size());
-	            break;
-
-		     
-	       	       } 
-	       	   }while (opcion !=0);
-
+	    int p=1;
+	    int i=1;
+	    String boton;
+	    System.out.println("Bienvenido a su Ascensor ");
+	    System.out.println("en que piso esta?");
+	    
+	    
+	 do{
+	    
+	    System.out.println("escriba que desea hacer,\n subir o bajar\n o 0 para salir");
+	    boton=sc.next();
+	    Ascensor nuevo=new Ascensor ();
+	    switch (boton){
+			
+			case "subir":
+				System.out.println("ahora usted esta en el piso:"+p++);
+				
+								
+				
+				
+		
+		case "bajar":
+			
+			System.out.println("ahora usted esta en el piso:"+p--);
+									
+				
+			
+	
 
 	}
+	        
+	        
+	   
+}while (opcion !=0);
 
+}
 }
 
